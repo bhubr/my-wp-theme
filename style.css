@@ -4,7 +4,7 @@
 body {
   font-family: "Helvetica Neue", Arial;
   font-weight: 200;
-  background: #eee;
+  background: #89a;
 }
 
 h1, h2, h3 {
@@ -33,5 +33,28 @@ a.active {
   padding: 20px;
   border: 1px solid #ddd;
   margin-bottom: 30px;
-  background: #fff;
+  background: #ddd;
+}
+
+.post-meta {
+  font-style: italic;
+  color: #777;
+}
+
+.header {
+  background: #33404b;
+  border-bottom: #33404b solid 2px;
+  border-top: #33404b solid 10px;
+  /*margin-top: 10px;*/
+  /*margin-bottom: 20px;*/
+}
+
+.header img {
+  max-width: 960px;
+}
+
+.pure-menu {
+  background: #33404b;
+  padding-left: 5px;
+  border-bottom: #33404b solid 7px;
 }
