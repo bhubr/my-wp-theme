@@ -41,5 +41,6 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/materialize.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/init.js"></script>
 
+  <?php wp_footer(); ?>
   </body>
 </html>

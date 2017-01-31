@@ -9,6 +9,7 @@
 // $replace2 = str_replace('a href', 'a class="pure-menu-link" href', $replace1);
 // echo $replace2;
 ?>
+<div class="navbar-fixed">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Logo</a>
@@ -22,3 +23,4 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+</div>
