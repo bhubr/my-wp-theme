@@ -1,60 +1,61 @@
 /*
- Theme Name: My Theme
+ Theme Name: My MaterializeCSS Theme
  */
-body {
-  font-family: "Helvetica Neue", Arial;
-  font-weight: 200;
-  background: #89a;
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Based on Parallax Template by MaterializeCSS.com:
+ * http://materializecss.com/getting-started.html#templates
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
 }
 
-h1, h2, h3 {
-  font-weight: 100;
+p {
+  line-height: 2rem;
 }
 
-a {
-  color: hsl(200, 50%, 50%);
+.button-collapse {
+  color: #26a69a;
 }
 
-a.active {
-  color: hsl(20, 50%, 50%);
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
 }
 
-.breadcrumbs a {
-  text-decoration: none;
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
 }
 
-#main {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
 }
 
-.post {
-  padding: 20px;
-  border: 1px solid #ddd;
-  margin-bottom: 30px;
-  background: #ddd;
-}
-
-.post-meta {
-  font-style: italic;
-  color: #777;
-}
-
-.header {
-  background: #33404b;
-  border-bottom: #33404b solid 2px;
-  border-top: #33404b solid 10px;
-  /*margin-top: 10px;*/
-  /*margin-bottom: 20px;*/
-}
-
-.header img {
-  max-width: 960px;
-}
-
-.pure-menu {
-  background: #33404b;
-  padding-left: 5px;
-  border-bottom: #33404b solid 7px;
+footer.page-footer {
+  margin: 0;
 }
