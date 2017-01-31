@@ -12,13 +12,18 @@
 <div class="navbar-fixed">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="#" class="brand-logo">
+      <span class="green-text text-darken-2">b</span>.<span class="orange-text text-darken-2">hubert</span></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#about">A propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#latest-posts">Derniers articles</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#about">A propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#latest-posts">Derniers articles</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>

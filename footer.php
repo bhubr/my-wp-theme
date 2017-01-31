@@ -1,9 +1,9 @@
 
-  <footer class="page-footer deep-purple">
+  <footer class="page-footer green">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
+          <h5 class="white-text">Benoît Hubert</h5>
           <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
 
@@ -30,7 +30,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Powered by <a class="brown-text text-lighten-3" href="http://wordpress.org">WordPress</a> and <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a> &mdash; (c)2017 Benoît Hubert
       </div>
     </div>
   </footer>
@@ -40,6 +40,12 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/materialize.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/init.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.scrollspy').scrollSpy();
+    });
+  </script>
 
   <?php wp_footer(); ?>
   </body>

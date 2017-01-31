@@ -28,7 +28,19 @@ p {
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
+  background-color: rgba(0,0,0,.5);
 }
+.parallax-container.main {
+  min-height: 580px;
+  background-color: rgba(0,0,0,.7);
+}
+.padding {
+  min-height: 120px;
+}
+.parallax-container.main h5 {
+  line-height: 1.5em;
+}
+
   .parallax-container .section {
     width: 100%;
   }
@@ -58,4 +70,9 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+ul.hide-on-med-and-down li > a.active {
+  padding-bottom: 0;
+  border-bottom: 3px solid #f57c00;
 }
