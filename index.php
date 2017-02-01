@@ -5,6 +5,7 @@
         <?php next_posts_link('next'); ?>
     </div>
 </div>
+<?php $lang = apply_filters( 'wpml_current_language', NULL ); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -15,15 +16,16 @@
         <div class="row center">
           <h4 class="header col s12">Benoît Hubert</h4>
         </div>
-        <h1 class="header center deep-purple-text text-darken-2"><span class="green-text text-ligthen-3">Développeur</span> <span class="orange-text text-lighten-3">logiciel&amp;web</span></h1>
+        <h1 class="header center deep-purple-text text-darken-2">
+          <span class="green-text text-ligthen-3"><?php echo get_option("{$lang}_position_title1"); ?></span> <span class="orange-text text-lighten-3"><?php echo get_option("{$lang}_position_title2"); ?></span>
+        </h1>
         <div class="row center">
-          <h5 class="header col s12">Couteau suisse du développement logiciel,<br>spécialisé dans le web full-stack en JavaScript et PHP</h5>
+          <h5 class="header col s12"><?php echo get_option("{$lang}_position_description"); ?></h5>
         </div>
         <div class="row center">
           <a href="#about" id="download-button" class="btn-large waves-effect waves-light green darken-4">A propos</a>
         </div>
         <br><br>
-
       </div>
     </div>
     <div class="parallax"><img src="<?php echo get_template_directory_uri(); ?>/images/bgAriege.jpg" alt="Montagne en Ariège"></div>
@@ -109,9 +111,10 @@
 
 <?php
 $posts = get_posts([
-    'post_type'      => 'post',
-    'status'         => 'published',
-    'posts_per_page' => 3
+    'post_type'        => 'post',
+    'status'           => 'published',
+    'posts_per_page'   => 3,
+    'suppress_filters' => 0
 ]);
 // var_dump($posts);
 if( !empty($posts) ):

@@ -1,4 +1,3 @@
-
   <footer class="page-footer green">
     <div class="container">
       <div class="row">
@@ -18,13 +17,8 @@
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+          <h5 class="white-text"><?php _e('Change language', 'bhu_matcss'); ?></h5>
+          <?php my_footer_languages_list(); ?>
         </div>
       </div>
     </div>

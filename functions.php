@@ -1,10 +1,4 @@
 <?php
-
-function enqueue_my_style() {
-    wp_enqueue_style('main', get_template_directory_uri() . '/style.css?ts=' . time());
-}
-add_action('wp_enqueue_scripts', 'enqueue_my_style');
-
 function show_random_image() {
     $images = array_map( function($image) {
       return basename($image);
@@ -14,6 +8,33 @@ function show_random_image() {
     // $image_alt = basename($images[$index], 'jpg');
     echo "<img src=\"$image_url\" alt=\"$image_url\" />";
 }
+
+function has_WPML() {
+    return function_exists('icl_object_id');
+}
+
+function my_footer_languages_list(){
+    $languages = apply_filters( 'wpml_active_languages', NULL, 'skip_missing=0&orderby=code' );
+    if( !empty( $languages ) ){
+        echo '<div id="footer_language_list"><ul>';
+        foreach( $languages as $l ){
+            echo '<li>';
+            if( $l['country_flag_url'] ){
+                if( !$l['active'] ) echo '<a href="'.$l['url'].'">';
+                echo '<img src="'.$l['country_flag_url'].'" height="12" alt="'.$l['language_code'].'" width="18" />';
+                if( !$l['active'] ) echo '</a>';
+            }
+            if(!$l['active']) echo '<a href="'.$l['url'].'">';
+            echo apply_filters( 'wpml_display_language_names', NULL, $l['native_name'], $l['translated_name'] );
+            if( !$l['active'] ) echo '</a>';
+            echo '</li>';
+        }
+        echo '</ul></div>';
+    }
+}
+
+require 'class-materialize-theme.php';
+$materializeTheme = new bhubr\MaterializeTheme;
 
 // add_action( 'after_setup_theme', 'register_my_menu' );
 // function register_my_menu() {
